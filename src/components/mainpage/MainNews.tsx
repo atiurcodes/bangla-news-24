@@ -6,7 +6,7 @@ export default function MainNews({ news }: { news: MainNewsType[] }) {
     const [firstNews, ...otherNews] = news;
     return (
         <div className="flex gap-4">
-            <Link href="">
+            <Link href="" className="flex-1">
                 <div className="card bg-base-100 shadow-sm">
                     <figure>
                         <Image src={firstNews.imageUrl} alt={firstNews.imageAlt}
@@ -19,7 +19,7 @@ export default function MainNews({ news }: { news: MainNewsType[] }) {
                     </div>
                 </div>
             </Link>
-            <div className="border border-gray-300 rounded-xl">
+            <div className="border border-gray-300 rounded-xl flex-1">
                 <Link href="">
                     {
                         otherNews.slice(0, 4).map(other => <div key={other.id}
